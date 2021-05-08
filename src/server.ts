@@ -1,16 +1,15 @@
-import * as bodyParser from "body-parser";
-import { Server } from "@overnightjs/core";
-import "./utils/module-alias";
-import { ForecastController } from "./controllers/forecast";
-import {} from "@test/functional/forecast.test";
-import { Application } from "express";
+import * as bodyParser from 'body-parser';
+import { Server } from '@overnightjs/core';
+import './utils/module-alias';
+import { ForecastController } from './controllers/forecast';
+import { Application } from 'express';
 // import { Logger } from "@overnightjs/logger";
 // import { UserController } from "./UserController";
 // import { SignupController } from "./SignupController";
 
 export class SetupServer extends Server {
   constructor(private port = 3000) {
-    super(process.env.NODE_ENV === "development"); // setting showLogs to true
+    super(process.env.NODE_ENV === 'development'); // setting showLogs to true
   }
 
   private setupExpress(): void {
